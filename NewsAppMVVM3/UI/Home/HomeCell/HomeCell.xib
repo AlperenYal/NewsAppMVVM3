@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCell" id="gTV-IL-0wX" customClass="HomeCell" customModule="NewsAppMVVM3" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="657"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="657"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zYq-YU-JzO">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="343" id="Dfu-uj-H6h"/>
+                            <constraint firstAttribute="height" constant="200" id="pQi-d9-q6b"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg0-4N-ZFI">
+                        <rect key="frame" x="0.0" y="208" width="343" height="14"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zc-q7-1iq">
+                        <rect key="frame" x="0.0" y="276.33333333333331" width="343" height="16.333333333333314"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vA-BR-C6J">
+                        <rect key="frame" x="0.0" y="230" width="343" height="38.333333333333314"/>
+                        <string key="text">Title1 Title1 Title1 Title1 Title1 Title1Title1 Title1 Title1 Title1 Title1 Title1Title1 Title1 Title1 Title1 Title1 Title1Title1 Title1 Title1 Title1 Title1 Title1Title1 Title1 Title1 Title1 Title1 Title1Title1 Title1 Title1 Title1 Title1 Title1</string>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8z-u3-EqO">
+                        <rect key="frame" x="306" y="22" width="15" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="Vector"/>
+                        <connections>
+                            <action selector="favoriteButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Xcd-TD-u7M"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="fg0-4N-ZFI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7k7-k3-ZYq"/>
+                <constraint firstAttribute="trailing" secondItem="6Zc-q7-1iq" secondAttribute="trailing" id="JDk-HA-Vi7"/>
+                <constraint firstAttribute="trailing" secondItem="2vA-BR-C6J" secondAttribute="trailing" id="OC5-6f-5u0"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6Zc-q7-1iq" secondAttribute="bottom" constant="8" id="PXC-NA-ZFw"/>
+                <constraint firstItem="6Zc-q7-1iq" firstAttribute="top" secondItem="2vA-BR-C6J" secondAttribute="bottom" constant="8" id="QtR-5O-f4h"/>
+                <constraint firstAttribute="trailing" secondItem="fg0-4N-ZFI" secondAttribute="trailing" id="V8f-Fb-tUs"/>
+                <constraint firstItem="fg0-4N-ZFI" firstAttribute="top" secondItem="zYq-YU-JzO" secondAttribute="bottom" constant="8" id="Ypb-e8-1kU"/>
+                <constraint firstItem="2vA-BR-C6J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cYy-ZU-F04"/>
+                <constraint firstAttribute="trailing" secondItem="zYq-YU-JzO" secondAttribute="trailing" id="g0j-Ez-sUy"/>
+                <constraint firstItem="6Zc-q7-1iq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lxo-bO-rgC"/>
+                <constraint firstItem="zYq-YU-JzO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pqH-Ln-WNT"/>
+                <constraint firstItem="2vA-BR-C6J" firstAttribute="top" secondItem="fg0-4N-ZFI" secondAttribute="bottom" constant="8" id="s3R-Yx-xFs"/>
+                <constraint firstItem="zYq-YU-JzO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yGp-bu-S9m"/>
+            </constraints>
+            <size key="customSize" width="338" height="447"/>
+            <connections>
+                <outlet property="favoritesButton" destination="u8z-u3-EqO" id="c0k-kb-oXC"/>
+                <outlet property="imageView" destination="zYq-YU-JzO" id="F16-jo-O0R"/>
+                <outlet property="sourceLabel" destination="fg0-4N-ZFI" id="LaX-iV-3et"/>
+                <outlet property="titleOneLabel" destination="2vA-BR-C6J" id="73n-w5-kMr"/>
+                <outlet property="titleTwoLabel" destination="6Zc-q7-1iq" id="HHI-CS-GNa"/>
+            </connections>
+            <point key="canvasLocation" x="-48.091603053435115" y="216.5492957746479"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Vector" width="15" height="30"/>
+    </resources>
+</document>

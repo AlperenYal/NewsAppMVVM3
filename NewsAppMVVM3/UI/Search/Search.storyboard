@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0C1-AX-cxX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="SearchController" customModule="NewsAppMVVM3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eX5-yF-pAI">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eX5-yF-pAI" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="VVn-C4-L1b"/>
+                            <constraint firstItem="eX5-yF-pAI" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="fA2-dx-sll"/>
+                            <constraint firstAttribute="bottom" secondItem="eX5-yF-pAI" secondAttribute="bottom" id="mSt-Yx-T1g"/>
+                            <constraint firstItem="eX5-yF-pAI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vd0-fo-B4a"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="BsQ-MY-gKS"/>
+                    <connections>
+                        <outlet property="tableView" destination="eX5-yF-pAI" id="Pmt-4T-tp4"/>
+                        <segue destination="yJs-Pf-iT1" kind="show" identifier="toSearchDetail" id="3Aa-5i-eiH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="958.01526717557249" y="-2.1126760563380285"/>
+        </scene>
+        <!--SearchDetailsController-->
+        <scene sceneID="9z5-ul-MgY">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SearchDetailsController" storyboardName="SearchDetails" referencedIdentifier="SearchDetailsController" id="yJs-Pf-iT1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ywy-yU-8QT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5K-0M-GsT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1904" y="-3"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xNF-3N-fke">
+            <objects>
+                <navigationController storyboardIdentifier="SearchController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0C1-AX-cxX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" image="🦆 icon _magnifying glass_" id="6Nb-yK-P3F"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="873-Ia-se2">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="a7C-hO-10v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oty-jl-z8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.297709923664122" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="🦆 icon _magnifying glass_" width="25" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

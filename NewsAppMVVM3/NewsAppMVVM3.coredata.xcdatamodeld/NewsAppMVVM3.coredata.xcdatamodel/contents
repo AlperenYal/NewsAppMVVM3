@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="FavoriteNewsCoreData" representedClassName=".FavoriteNewsCoreData" syncable="YES">
+        <attribute name="imageView" optional="YES" attributeType="String"/>
+        <attribute name="sourceLabel" optional="YES" attributeType="String"/>
+        <attribute name="titleOneLabel" optional="YES" attributeType="String"/>
+        <attribute name="titleTwoLabel" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+</model>

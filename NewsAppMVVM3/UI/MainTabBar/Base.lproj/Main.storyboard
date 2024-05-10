@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0r1-eM-QhY">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Controller-->
+        <scene sceneID="Qzx-kk-nwZ">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabController" modalPresentationStyle="fullScreen" id="0r1-eM-QhY" customClass="MainTabController" customModule="NewsAppMVVM3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qWN-NR-oaM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jDT-At-7Jb" kind="relationship" relationship="viewControllers" id="Xk5-Bn-MAO"/>
+                        <segue destination="HeO-ry-fuZ" kind="relationship" relationship="viewControllers" id="3MQ-RV-Ho9"/>
+                        <segue destination="NhQ-Fv-RA5" kind="relationship" relationship="viewControllers" id="Q4T-db-Fss"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MuP-8X-kHg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921" y="-2"/>
+        </scene>
+        <!--SearchController-->
+        <scene sceneID="eJ2-kg-xau">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" referencedIdentifier="SearchController" id="HeO-ry-fuZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="🦆 icon _magnifying glass_" id="cfV-Sc-ZnB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Vr-zL-6ks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1747" y="63"/>
+        </scene>
+        <!--FavoritesController-->
+        <scene sceneID="mVA-YF-IrS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Favorites" referencedIdentifier="FavoritesController" id="NhQ-Fv-RA5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Vector" id="YyO-wY-tch"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YYg-QZ-09T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748" y="-99"/>
+        </scene>
+        <!--HomeController-->
+        <scene sceneID="5Et-Bn-lRz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeController" id="jDT-At-7Jb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Group" id="QTz-s4-MS9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atn-wR-kaw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752" y="-21"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Group" width="23.666666030883789" height="24.666666030883789"/>
+        <image name="Vector" width="15" height="30"/>
+        <image name="🦆 icon _magnifying glass_" width="25" height="25"/>
+    </resources>
+</document>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q2Y-9B-zLw">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="TX7-N9-4U1">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="Q2Y-9B-zLw" customClass="SplashViewController" customModule="NewsAppMVVM3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N5z-go-0Qj" customClass="SplashContainerView" customModule="NewsAppMVVM3" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9iJ-8x-vhG">
+                                <rect key="frame" x="137" y="335" width="118.66666666666669" height="182.33333333333337"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spinner.gif" translatesAutoresizingMaskIntoConstraints="NO" id="GbS-d8-9WG">
+                                        <rect key="frame" x="34.333333333333343" y="0.0" width="50" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="21e-kN-ZG1"/>
+                                            <constraint firstAttribute="height" constant="150" id="seX-0e-M2a"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ic7-rZ-UUN">
+                                        <rect key="frame" x="0.0" y="150" width="118.66666666666667" height="32.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118.67" id="IfW-La-dXe"/>
+                                    <constraint firstAttribute="height" constant="182.33000000000001" id="luv-iy-GyH"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e7E-VV-W1V"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9iJ-8x-vhG" firstAttribute="top" secondItem="e7E-VV-W1V" secondAttribute="top" constant="276" id="R3y-i2-WRm"/>
+                            <constraint firstItem="e7E-VV-W1V" firstAttribute="trailing" secondItem="9iJ-8x-vhG" secondAttribute="trailing" constant="137.33000000000001" id="iDx-lg-IA8"/>
+                            <constraint firstItem="e7E-VV-W1V" firstAttribute="bottom" secondItem="9iJ-8x-vhG" secondAttribute="bottom" constant="300.67000000000002" id="kVZ-dY-yAA"/>
+                            <constraint firstItem="9iJ-8x-vhG" firstAttribute="leading" secondItem="e7E-VV-W1V" secondAttribute="leading" constant="137" id="zvZ-UH-sBO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="splashImage" destination="GbS-d8-9WG" id="SMT-EW-pJm"/>
+                        <outlet property="splashLabel" destination="Ic7-rZ-UUN" id="P6e-ER-TeB"/>
+                        <segue destination="Ghz-B2-srL" kind="show" identifier="showMainTabSegue" id="YTa-Tq-E3z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ntd-JH-GE8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+        <!--MainTabController-->
+        <scene sceneID="ANB-ua-pCx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainTabController" id="Ghz-B2-srL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="VdS-QW-Mex"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6y0-ak-9LU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="675" y="-4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="spinner.gif" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
